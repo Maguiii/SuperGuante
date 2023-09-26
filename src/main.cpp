@@ -20,31 +20,31 @@ void setup() {
 void loop() {
 
 /////////////DERECHA IZQUIERDA//////////////
-  while(digitalRead(indice) == HIGH){
-     Serial.write('1');
+  if(digitalRead(indice) == HIGH){
+     Serial.write('a');
      delay(50);
   } 
-  while(digitalRead(mayor) == HIGH){
-     Serial.write('3');
+  if(digitalRead(mayor) == HIGH){
+     Serial.write('b');
      delay(50);
   }
 /////////////ADELANTE ATRAS////////////////
-  while(digitalRead(anular) == HIGH){
-     Serial.write('5');
+  if(digitalRead(anular) == HIGH){
+     Serial.write('c');
      delay(50);
   }
-  while(digitalRead(menique) == HIGH){
-     Serial.write('7');
+  if(digitalRead(menique) == HIGH){
+     Serial.write('d');
      delay(50);
   }
 /////////////////ABAJO////////////////////
-  while(digitalRead(extra) == HIGH){
-     Serial.write('9');
+  if(digitalRead(extra) == HIGH){
+     Serial.write('e');
      delay(50);
   }
-
-  while(digitalRead(indice) == LOW && digitalRead(mayor) == LOW && digitalRead(anular) == LOW && digitalRead(menique) == LOW && digitalRead(extra) == LOW){
+/* Con esto no funciona
+  if(digitalRead(indice) == LOW && digitalRead(mayor) == LOW && digitalRead(anular) == LOW && digitalRead(menique) == LOW && digitalRead(extra) == LOW){
     Serial.write('0');
     delay(50);
-  }
+  }*/
 }

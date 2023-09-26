@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 #define mayor A0 //IZQUIERDA 3
 #define indice A1 //DERECHA 1
 #define anular A2 //ADELANTE 5
@@ -39,5 +41,10 @@ void loop() {
   while(digitalRead(extra) == HIGH){
      Serial.write('9');
      delay(50);
+  }
+
+  while(digitalRead(indice) == LOW && digitalRead(mayor) == LOW && digitalRead(anular) == LOW && digitalRead(menique) == LOW && digitalRead(extra) == LOW){
+    Serial.write('0');
+    delay(50);
   }
 }
